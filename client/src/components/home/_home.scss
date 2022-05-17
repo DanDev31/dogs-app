@@ -1,0 +1,21 @@
+.home__container{
+    background-color: settings.$background;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+    width: 100%;
+
+    .home__container-info{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .link{
+        margin-top: 3rem;
+        text-decoration: none;
+        @include settings.button;
+    }
+}
+

@@ -1,0 +1,36 @@
+//Colors
+
+$primary-ligth: #126a7a;
+$primary-dark: #12404c;
+$background: #f6fcf3;
+$white: #ffffff;
+$black: #121212;
+$loader: #272525;
+
+
+@mixin button{
+    border: none;
+    border-radius: .5rem;
+    background-color: $primary-ligth;
+    color: $white;
+    cursor: pointer;
+    font-size: 1.4rem;
+    outline: none;
+    padding: 1rem 1.5rem;
+    transition: .1s ease-in-out;
+
+    &:hover{
+        background-color: $primary-dark;
+    }
+}
+
+
+@mixin input{
+    border: none;
+    border-bottom: 2px solid grey;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    outline: none;
+    padding: .5rem 1rem;
+    
+}

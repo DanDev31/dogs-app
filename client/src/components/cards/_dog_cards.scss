@@ -1,0 +1,14 @@
+.cards__container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin-top: 5rem;
+   
+}
+
+.cards__container-nofound-message{
+  
+    font-size: 2rem;
+    margin-top: 5rem;
+    text-align: center;
+}

@@ -1,0 +1,23 @@
+@use './base/base';
+@use './base//settings';
+
+
+
+@import '../components/home/home';
+@import '../components/navbar/navbar';
+@import '../components/filter_bar/filter_bar';
+@import '../components/main/main';
+@import '../components/cards/dog_cards';
+@import '../components/card/dog_card';
+@import '../components/dog_description/dog_description';
+@import '../components/create_breed/create_breed';
+@import '../components/pagination/pagination';
+@import '../components/loader/loader';
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+.filter__bar-container{
+    background-color: rgb(243, 242, 237);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem 0;
+    width: 100%;
+
+}
+
+.filter__bar-form{
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.filter__bar-order{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+label{
+    font-size: 1.4rem;
+}
+
+input, select{
+    @include settings.input;
+}
+
+button{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: .8rem 1rem !important;
+    @include settings.button;
+}
+

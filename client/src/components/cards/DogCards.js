@@ -1,0 +1,60 @@
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { DogCard } from '../card/DogCard'
+import { Pagination } from '../pagination/Pagination';
+import { fetchData } from '../../features/fetchAPI/fetchSlice';
+import { Loader } from '../loader/Loader';
+
+
+
+export const DogCards = () => {
+
+  const dispatch = useDispatch();
+  const dogs = useSelector(state => state.fetch.data)
+  const page = useSelector(state => state.fetch.pagination)
+
+  // const [page, setPage] = useState(1)
+  const [loading, setLoading] = useState(false)
+
+  const byPage = 8
+  const max = Math.ceil(dogs.length / byPage)
+  
+ console.log(page)
+  useEffect(() => { 
+    dispatch( fetchData() )
+    
+      setLoading(true)
+  
+  }, [dispatch])
+
+
+  return (
+    <section>
+      {
+        loading ?
+          (dogs.length > 0 ?
+            <>
+            <div className='cards__container'>
+              {
+                dogs
+                .slice((page - 1) * byPage, (page - 1) * byPage + byPage)
+                .map( dog => (
+                  <DogCard 
+                    key = { dog.id }
+                    { ...dog }
+                  />
+                ))
+              }
+          </div>
+            <Pagination page={ page }  max={ max } />
+          </>
+          :
+            <p className='cards__container-nofound-message'>There is not a breed with that name.</p>  
+            )
+        :
+        <Loader/>
+      }
+    </section>
+  )
+}

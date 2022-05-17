@@ -1,0 +1,38 @@
+.navbar{
+    // background-color: rgb(243, 242, 237);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 3.5rem 5rem;
+    width: 100%;
+
+    .navbar__menu{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+
+        li{
+            font-size: 1.5rem;
+            list-style: none;
+           & > * {
+            text-decoration: none;
+           }
+        }
+
+        .dogs__link{
+            color: settings.$black;
+        }
+    }
+
+    .link{
+        text-decoration: none;
+        @include settings.button;
+    }
+    .logo{
+        color: settings.$primary-ligth;
+        font-size: 3rem;
+        font-weight: 700;
+        text-decoration: none;
+    }
+}

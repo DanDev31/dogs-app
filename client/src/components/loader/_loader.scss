@@ -1,0 +1,67 @@
+.loader__container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 14rem;
+    height: 50vh;
+    position: relative;
+}
+
+.paw__container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.paw__image{
+    width: 10rem;
+}
+
+.paw__image.one{
+    margin-top: -10rem;
+    transform: rotateZ(80deg);
+    animation: walk 2s linear infinite .5s;
+
+}
+
+.paw__image.two{
+    margin-top: 10rem;
+    transform: rotateZ(90deg);
+    animation: walk 2s linear infinite 1s;
+}
+
+.paw__image.three{
+    margin-top: -10rem;
+    transform: rotateZ(80deg);
+    animation: walk 2s linear infinite 1.25s;
+}
+
+.paw__image.four{
+    margin-top: 10rem;
+    transform: rotateZ(90deg);
+    animation: walk 2s linear infinite 1.75s;
+}
+
+.paw__image.five{
+    margin-top: -10rem;
+    transform: rotateZ(80deg);
+    animation: walk 2s linear infinite 2s;
+}
+
+.paw__image.six{
+    margin-top: 10rem;
+    transform: rotateZ(90deg);
+    animation: walk 2s linear infinite 2.25s;
+}
+
+@keyframes walk {
+
+    25%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+
+    
+  }

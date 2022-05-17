@@ -1,0 +1,23 @@
+.dog__card-link{
+    color: black;
+    text-decoration: none;
+}
+
+.dog__card{
+    box-shadow: 2px 2px 10px 2px rgb(205, 205, 205);
+    text-align: center;
+
+    h3{
+        padding: 1.5rem;
+    }
+
+    .dog__card-img{
+        height: 40rem;
+    }
+
+    .dog__card-info{
+        font-size: 1.3rem;
+        padding: 1.5rem;
+    }
+
+}

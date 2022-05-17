@@ -1,0 +1,50 @@
+.create__breed-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2{
+        margin-bottom: 2rem;
+    }
+
+    .create__breed-container-error__message{
+        background-color: rgb(236, 49, 49);
+        color: settings.$white;
+        font-size: 1.5rem;
+        padding: .8rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .create__breed-container-form{
+        
+        width: 40rem;
+   
+        fieldset{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 3rem;
+
+            legend{
+                font-size: 1.3rem;
+            }
+        }
+
+        .create__breed-option-container{
+            padding: 1.5rem;
+
+            div{
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 1.5rem;
+
+                button{
+                    background-color: rgb(221, 29, 29);
+                }
+            }
+        }
+    }
+}

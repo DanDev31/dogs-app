@@ -1,0 +1,16 @@
+.pagination__container{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    width: 100%;
+}
+
+.pagination__buttons{
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.no-active{
+    display: none;
+}
