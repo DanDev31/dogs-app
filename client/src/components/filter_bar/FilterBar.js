@@ -9,6 +9,7 @@ export const FilterBar = () => {
   const [temps, setTemps] = useState([])
   const [breed, setBreed] = useState('')
   const [listValue, setListValue] = useState('')
+  const [addClass, setAddClass] = useState(false)
 
  
   const dispatch = useDispatch()
@@ -58,13 +59,23 @@ export const FilterBar = () => {
     dispatch(fetchActions.reloadPage())
   }
 
+  //Display filter bar menu
+
+  const handleDisplayMenu = () => {
+    setAddClass(!addClass)
+  }
+
 
   return (
     <div className='filter__bar-container'>
-      <div className='search__bar'>
+      <div className="filter__bar-arrow">
+        <ion-icon name="caret-down-outline" className="arrow-icon" onClick={handleDisplayMenu}></ion-icon>
+      </div>
+      <div className={`filter__bar-wrapper ${addClass ? "active" : "" }`}>
+      <div className='search__bar form-box'>
           <input type="text" placeholder='Search by Breed...' onChange={ handleFilterByBreed } />
       </div>
-      <form onSubmit={ handleFilterByTempSubmit } className="filter__bar-form" data-testid="form-1">
+      <form onSubmit={ handleFilterByTempSubmit } className="filter__bar-form form-box" data-testid="form-1">
 
         <label>Filter by temperament:</label>
         <input list="temperaments" name="temperament" id="temperament" onChange={ handleFilterByTemp }/>
@@ -82,7 +93,7 @@ export const FilterBar = () => {
           <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
       </form>
       
-        <div className='filter__bar-order'>
+        <div className='filter__bar-order form-box'>
           <label>Order by:</label>
           <select onChange={ handleOrderByName }>
             <option value="">Alphabetical</option>
@@ -98,9 +109,10 @@ export const FilterBar = () => {
         </div>
 
         <button
+          className='reload-button'
           onClick={ handleReload }
         >Reload</button>
-
+      </div>
     </div>
   )
 }

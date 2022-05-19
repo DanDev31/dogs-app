@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 100vh;
+    position: relative;
     width: 100%;
 
     .home__container-info{
@@ -16,6 +17,19 @@
         margin-top: 3rem;
         text-decoration: none;
         @include settings.button;
+    }
+}
+
+@media(max-width:400px){
+    .home__container-image{
+        display: none;
+    }
+    .home__container-info{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
 }
 

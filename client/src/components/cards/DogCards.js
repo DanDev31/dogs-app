@@ -19,12 +19,13 @@ export const DogCards = () => {
 
   const byPage = 8
   const max = Math.ceil(dogs.length / byPage)
-  
- console.log(page)
+
   useEffect(() => { 
-    dispatch( fetchData() )
     
+    dispatch( fetchData() )
+    setTimeout(() => {
       setLoading(true)
+    }, 1000);
   
   }, [dispatch])
 

@@ -4,7 +4,9 @@
     justify-content: center;
     gap: 14rem;
     height: 50vh;
+    margin: 0 auto;
     position: relative;
+    width: 95%;
 }
 
 .paw__container{
@@ -14,7 +16,7 @@
 }
 
 .paw__image{
-    width: 10rem;
+    width: 8rem;
 }
 
 .paw__image.one{
@@ -62,6 +64,12 @@
     100%{
         opacity: 0;
     }
-
-    
+ 
   }
+
+
+// @media(max-width:500px){
+//     .paw__container{
+//         flex-direction: column;
+//     }
+// }

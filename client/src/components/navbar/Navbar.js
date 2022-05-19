@@ -24,11 +24,13 @@ export const Navbar = () => {
 
         <li>
           <Link to="newbreed" className='link'>
-            Create new dog
+            New Breed
           </Link>
         </li>
-
       </ul>
+      
     </nav>
   )
 }
+
+
