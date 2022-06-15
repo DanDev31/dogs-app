@@ -26,7 +26,7 @@ const getTemperaments = require('./src/helpers/getTemperamentsByFetch')
 
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: false }).then(() => {
 
   getTemperaments().then(async (res) => {
     res.forEach(async(t) => {
