@@ -30,7 +30,7 @@ export const CreateBreed = () => {
   
   const getTemps = async() => {
     try {
-      const response = await axios.get('http://localhost:3001/temperament')
+      const response = await axios.get('/temperament')
       const data = await response.data
       setTemps(data)
     } catch (error) {
@@ -41,7 +41,7 @@ export const CreateBreed = () => {
 
   const postNewDog = async() => {
     try {
-      await axios.post('http://localhost:3001/dogs', formValues)
+      await axios.post('/dogs', formValues)
     } catch (error) {
       console.log(error.message)
     }
