@@ -34,7 +34,7 @@ export const DogCards = () => {
     <section>
       {
         loading ?
-          (dogs?.length > 0 ?
+          (dogs?.length > 0 && dogs !== undefined?
             <>
             <div className='cards__container'>
               {
