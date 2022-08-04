@@ -13,7 +13,7 @@ export const DogCards = () => {
   const dispatch = useDispatch();
   const dogs = useSelector(state => state.fetch.data)
   const page = useSelector(state => state.fetch.pagination)
-  console.log(dogs)
+
   // const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(false)
 
