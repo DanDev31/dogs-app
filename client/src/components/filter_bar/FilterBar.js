@@ -13,7 +13,7 @@ export const FilterBar = () => {
   const dispatch = useDispatch();
 
   const getTemps = async () => {
-    const response = await axios.get("temperament");
+    const response = await axiosInstance.get("temperament");
     const data = await response.data;
     setTemps(data);
   };

@@ -10,7 +10,7 @@ export const fetchData = createAsyncThunk(
       const res1 = await axios.get(`${BASE_URL}v1/breeds`);
       const data1 = await res1.data;
 
-      const res2 = await axios.get("dogs");
+      const res2 = await axiosInstance.get("dogs");
       const data2 = await res2.data;
 
       const fData = data1.concat(data2);

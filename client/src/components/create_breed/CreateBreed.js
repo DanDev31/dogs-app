@@ -6,6 +6,7 @@ import axios from "axios";
 
 import { useForm } from "../../hooks/useForm";
 import { uiActions } from "../../features/iuReducer/iuReducer";
+import { axiosInstance } from "../../axios/axios.config";
 
 let tempId = 0;
 
@@ -27,7 +28,7 @@ export const CreateBreed = () => {
 
   const getTemps = async () => {
     try {
-      const response = await axios.get("temperament");
+      const response = await axiosInstance.get("temperament");
       const data = await response.data;
       setTemps(data);
     } catch (error) {
@@ -37,7 +38,7 @@ export const CreateBreed = () => {
 
   const postNewDog = async () => {
     try {
-      await axios.post("dogs", formValues);
+      await axiosInstance.post("dogs", formValues);
       Swal.fire({
         icon: "success",
         title: "Great!",
