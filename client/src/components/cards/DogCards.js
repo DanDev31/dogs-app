@@ -14,7 +14,7 @@ export const DogCards = () => {
   // const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(false);
 
-  if (dogs) {
+  if (!dogs) {
     return <h3>Data is not avalible.</h3>;
   }
 
