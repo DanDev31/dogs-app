@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Swal from "sweetalert2";
-
-import axios from "axios";
-
 import { useForm } from "../../hooks/useForm";
-import { uiActions } from "../../features/iuReducer/iuReducer";
 import { axiosInstance } from "../../axios/axios.config";
+import { uiActions } from "../../features/iuReducer/iuReducer";
+import Swal from "sweetalert2";
 
 let tempId = 0;
 

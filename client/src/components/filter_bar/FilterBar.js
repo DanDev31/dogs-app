@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import axios from "axios";
+import { axiosInstance } from "../../axios/axios.config";
 
 import { fetchActions } from "../../features/fetchAPI/fetchSlice";
 
