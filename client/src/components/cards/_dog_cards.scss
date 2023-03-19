@@ -1,13 +1,13 @@
 .cards__container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-template-rows: 50rem;
+    grid-gap: 2.5rem;
     margin-top: 5rem;
    
 }
 
 .cards__container-nofound-message{
-  
     font-size: 2rem;
     margin-top: 5rem;
     text-align: center;
