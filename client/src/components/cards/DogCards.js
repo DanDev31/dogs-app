@@ -14,6 +14,10 @@ export const DogCards = () => {
   // const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(false);
 
+  if (dogs) {
+    return <h3>Data is not avalible.</h3>;
+  }
+
   const byPage = 10;
   const max = Math.ceil(dogs.length / byPage);
 
